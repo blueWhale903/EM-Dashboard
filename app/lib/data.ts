@@ -3,8 +3,6 @@
 import { revalidatePath, unstable_noStore } from "next/cache";
 import { redirect } from "next/navigation";
 import { ParticipantSchema } from "./definitions";
-import { ApiError } from "next/dist/server/api-utils";
-import { METHODS } from "http";
 
 const APIURL = "https://em-api.netlify.app/api/v1";
 
@@ -40,7 +38,7 @@ export async function fetchEvents(
 
 export async function deleteEvent(eventId: string) {
   try {
-    await fetch(APIURL + `/event/${eventId}`, { method: "delete" }).then(
+    await fetch(APIURL + `/events/${eventId}`, { method: "delete" }).then(
       (res) => res.text()
     );
   } catch (error) {

@@ -1,4 +1,5 @@
-import { EventSchema } from "@/app/lib/definitions";
+"use client";
+
 import Link from "next/link";
 import {
   UserCircleIcon,
@@ -124,7 +125,7 @@ export default function Form() {
         >
           Quay lại
         </Link>
-        <Button type="submit">Thêm</Button>
+        <Button>Thêm</Button>
       </div>
     </form>
   );

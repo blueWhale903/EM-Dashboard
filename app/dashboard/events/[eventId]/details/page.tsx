@@ -6,6 +6,8 @@ import {
 } from "@/app/ui/participants/buttons";
 import Search from "@/app/ui/events/search";
 import { UserIcon } from "@heroicons/react/24/outline";
+import { Suspense } from "react";
+import Loading from "@/app/ui/loading";
 
 export default async function Page({
   params,

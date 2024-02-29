@@ -5,6 +5,8 @@ import Breadcrumbs from "@/app/ui/events/breadcrumbs";
 import Search from "@/app/ui/events/search";
 import { Suspense } from "react";
 import Pagination from "@/app/ui/pagination";
+import Loading from "@/app/ui/loading";
+
 export default async function Page({
   searchParams,
 }: {
@@ -30,7 +32,7 @@ export default async function Page({
         <Search placeholder="Tìm hoạt động..." />
         <CreateEvent />
       </div>
-      <Suspense>
+      <Suspense fallback={<Loading />}>
         <EventTable query={query} currentPage={currentPage} />
       </Suspense>
       <div className="mt-5 flex w-full justify-center">

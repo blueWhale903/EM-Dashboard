@@ -92,7 +92,6 @@ export async function updateEvent(id: string, formData: FormData) {
       dateFrom: formData.get("dateFrom"),
       dateTo: formData.get("dateTo"),
     };
-    console.log(JSON.stringify(data));
     await fetch(`${APIURL}/events/${id}`, {
       method: "PUT",
       headers: {
